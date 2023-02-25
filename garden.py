@@ -34,3 +34,21 @@ for sentence in gardenpathSentences:
 # Print the entities for each string in the gardenpathSentences list
 for sentence in gardenpathSentences:
     print([(w, w.label_, w.label) for w in sentence.ents])
+
+"""
+Output is 
+[]
+[]
+[(British, 'NORP', 381), (Falklands, 'ORG', 383)]
+[(Mississippi, 'GPE', 384)]
+[(Inuit, 'NORP', 381)]
+
+The first two strings contain no tokens identified by spaCy's 
+entity recognition.
+The last three have a 'NORP', 'ORG', and 'GPE' so we will check what these
+mean.
+"""
+
+print(spacy.explain("NORP"))
+print(spacy.explain("ORG"))
+print(spacy.explain("GPE"))
