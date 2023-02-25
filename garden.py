@@ -10,7 +10,6 @@ def list_nlp(list1):
     for index, sentence in enumerate(list1):
         nlp_sentence = nlp(sentence)
         list1[index] = nlp_sentence
-        print(list1)
     return list1
 
 
@@ -31,6 +30,8 @@ list_nlp(gardenpathSentences)
 for sentence in gardenpathSentences:
     print([(w.text, w.pos_) for w in sentence])
 
+print("")
+
 # Print the entities for each string in the gardenpathSentences list
 for sentence in gardenpathSentences:
     print([(w, w.label_, w.label) for w in sentence.ents])
@@ -49,9 +50,9 @@ The last three have a 'NORP', 'ORG', and 'GPE' so we will check what these
 mean.
 """
 
-print(spacy.explain("NORP"))
-print(spacy.explain("ORG"))
-print(spacy.explain("GPE"))
+print("\nNORP -", spacy.explain("NORP"))
+print("ORG -", spacy.explain("ORG"))
+print("GPE -", spacy.explain("GPE"))
 
 """
 Nationalities or religious or political groups
