@@ -10,7 +10,6 @@ def list_nlp(list1):
     for index, sentence in enumerate(list1):
         nlp_sentence = nlp(sentence)
         list1[index] = nlp_sentence
-        print(list1)
     return list1
 
 
