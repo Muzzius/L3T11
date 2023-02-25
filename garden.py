@@ -52,3 +52,19 @@ mean.
 print(spacy.explain("NORP"))
 print(spacy.explain("ORG"))
 print(spacy.explain("GPE"))
+
+"""
+Nationalities or religious or political groups
+Companies, agencies, institutions, etc.
+Countries, cities, states
+
+'British' is a NORP entity, which stands for -
+'Nationalities or religious or political groups'
+It makes sense here as 'British' is a nationality.
+
+'Falklands' has been identified as an 'ORG' which is intended for
+'Companies, agencies, institutions, etc.'
+This one is a little confusing to me, I would have expected this to be
+a 'GPE' (Geopolitical Entity) as it is a set of islands but maybe it is
+referring to the Falkland islands government?
+"""
